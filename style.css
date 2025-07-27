@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: "DM Sans", sans-serif;
+}
+
+#root{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+}
+.registration-page{
+    height: 100vh;
+    width: 100vw;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./assests/bgimage.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    
+}
+.registration-page>form{
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+    backdrop-filter: blur(20px);
+    border-radius: 25px;
+    border: 2px solid #ffffff85;
+    height: 68%;
+    width: 30%;
+    align-items: center;
+    gap: 18px;
+    padding: 20px 60px 10px;
+}
+.registration-page>form>div{
+    /* background-color: aqua; */
+    width: 100%;
+    height: 40px;
+    display: flex;
+    padding-right: 10px;
+    border-bottom: 3px solid black;
+}
+.registration-page>form>div:first-child,.registration-page>form>div:nth-last-child(2),.registration-page>form>div:nth-last-child(1){
+    border: none;
+}
+.registration-page>form>div>input{
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    font-size: 15px;
+    outline: none;
+}
+.registration-page>form>div>textarea{
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-size: 15px;
+}
+.registration-page>form>div>span>i{
+    height: 45px;
+
+}
+.registration-page>form>div>button{
+    width: 40%;
+}
+.login-page #Submit{
+    background-color: black;
+    color: white;
+    height: 40px;
+    width: 100%;
+    border-radius: 5%;
+    /* margin-left: 30%; */
+   
+}
+.registration-page #Submit{
+    background-color: black;
+    color: white;
+    height: 40px;
+    width: 38%;
+    border-radius: 5%;
+    margin-left: 30%;
+   
+}
+#fileinput::file-selector-button{
+    background-color: black;
+    color: white;
+    height: 40px;
+    width: 35%;
+    border-radius: 5%;
+}   
+
+.login-page{
+    height: 100vh;
+    width: 100vw;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./assests/bgimage.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    
+}
+.login-page>form>h1{
+    padding-bottom: 10px;
+    padding-top: 20px;
+}
+.login-page>form{
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+    backdrop-filter: blur(20px);
+    border-radius: 25px;
+    border: 2px solid #ffffff85;
+    height: 55%;
+    width: 25%;
+    align-items: center;
+    gap: 18px;
+    padding: 20px 40px 10px;
+}
+.login-page>form>div{
+    /* background-color: aqua; */
+    width: 100%;
+    height: 40px;
+    display: flex;
+    padding-right: 10px;
+}
+.login-page>form>div:nth-child(2),.login-page>form>div:nth-child(3){
+    border-bottom: 3px solid black;
+}
+.login-page>form>div>input{
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    font-size: 15px;
+    outline: none;
+}
+.login-page>form>div:nth-last-child(3){
+    border: none;
+    width: 100%;
+    display: flex;
+    /* gap: 20px; */
+    
+}
+
+.login-page>form>div>span>i{
+    height: 45px;
+
+}
+.login-page>form>div>button{
+    width: 40%;
+}
+
+.login-page form input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+}
+.login-page form label[for="remember"] {
+    margin: 0;
+    white-space: nowrap;
+}
+.login-page form .forgot-link {
+    margin-left: auto;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    white-space: nowrap;
+}
