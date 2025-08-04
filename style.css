@@ -14,7 +14,7 @@ body{
 #root{
     width: 100vw;
     height: 100vh;
-    background-color: black;
+    /* background-color: black; */
 }
 .registration-page{
     height: 100vh;
@@ -40,6 +40,10 @@ body{
     align-items: center;
     gap: 18px;
     padding: 20px 60px 10px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    transition: all 2s linear;
 }
 .registration-page>form>div{
     /* background-color: aqua; */
@@ -58,6 +62,11 @@ body{
     background-color: transparent;
     font-size: 15px;
     outline: none;
+    font-weight: 600;
+}
+
+.registration-page>form>div>input::placeholder{
+    color: rgba(0, 0, 0, 0.744);
 }
 .registration-page>form>div>textarea{
     width: 100%;
@@ -66,6 +75,10 @@ body{
     outline: none;
     font-size: 15px;
 }
+.registration-page>form>div>textarea::placeholder{
+    color: rgba(0, 0, 0, 0.744);
+    font-weight: 600;
+}
 .registration-page>form>div>span>i{
     height: 45px;
 
@@ -73,7 +86,7 @@ body{
 .registration-page>form>div>button{
     width: 40%;
 }
-.login-page #Submit{
+.login-page #submit{
     background-color: black;
     color: white;
     height: 40px;
@@ -82,7 +95,7 @@ body{
     /* margin-left: 30%; */
    
 }
-.registration-page #Submit{
+.registration-page #submit{
     background-color: black;
     color: white;
     height: 40px;
@@ -94,7 +107,7 @@ body{
 #fileinput::file-selector-button{
     background-color: black;
     color: white;
-    height: 40px;
+    height: 100%;
     width: 35%;
     border-radius: 5%;
 }   
@@ -141,9 +154,13 @@ body{
 .login-page>form>div>input{
     width: 100%;
     border: none;
+    font-weight: 600;
     background-color: transparent;
     font-size: 15px;
     outline: none;
+}
+.login-page>form>div>input::placeholder{
+    color: rgba(0, 0, 0, 0.744);
 }
 .login-page>form>div:nth-last-child(3){
     border: none;
@@ -176,4 +193,143 @@ body{
     color: #333;
     font-weight: 500;
     white-space: nowrap;
+}
+.registration-page>form>div>select{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: "DM Sans", sans-serif;
+    margin-left: -3px;
+    /* padding-right: 0px; */
+}
+.registration-page>form>div>select>option{
+    background-color: rgb(184, 217, 231);
+    font-weight: 600;
+
+}
+.addProduct>form{
+    height: 58%;
+    width: 28%;
+}
+.addProduct>form>h1{
+    margin-top: 10px;
+}
+.addProduct>form>div>textarea{
+    border-bottom: 3px solid black;
+}
+::-webkit-inner-spin-button{
+    display: none;
+}
+.products-list{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    flex-wrap: wrap;
+    transition: all 1s ease;
+    justify-content: center;
+    /* align-items: center; */
+}
+.card{
+    margin: 20px;
+    /* border: 2px solid black; */
+    width: 400px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.2),
+    -5px -5px 15px rgba(255,255,255,0.1);
+    transition: transform 0.4s ease;
+    
+    /* box-shadow: 5px 5px 5px red, -5px -5px 5px blue; */
+}
+.card:hover {
+  transform: scale(1.05);
+  /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+}
+.product-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.prod-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: height 0.4s ease;
+  border-radius: 15px;
+}
+.product-info {
+  position: absolute;
+  top: 250px;
+  left: 0;
+  padding: 20px;
+  color: black;
+  
+  width: 100%;
+  height: 220px;
+  /* background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%); */
+  opacity: 0;
+  transition: opacity 0.1s ease, transform 0.4s ease;
+  overflow: auto;
+}
+.card:hover .prod-img {
+  height: 250px;
+}
+
+.card:hover .product-info {
+  opacity: 1;
+   transform: translateY(0);
+}
+#add{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-radius: 12px;
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    height: 30px;
+    width: 150px;
+    background-color: red;
+
+}
+
+@media screen and (max-width:1068px)  {
+    .registration-page>form{
+        width: 45vw;
+        height: auto;
+    }
+    .login-page>form{
+        width: 40vw;
+        height: auto;
+    }
+}
+
+@media screen and (max-width:900px)  {
+    .registration-page>form{
+        width: 70vw;
+        height: auto;
+    }
+    .login-page>form{
+        width: 45vw;
+        height: auto;
+    }
+}
+@media screen and (max-width:768px)  {
+    .registration-page>form{
+        width: 90vw;
+        height: auto;
+    }
+    .login-page>form{
+        width: 90vw;
+        height: auto;
+    }
 }
